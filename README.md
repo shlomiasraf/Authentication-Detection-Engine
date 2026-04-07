@@ -100,6 +100,28 @@ auth_events
 
 --- 
 
+### Jupyter Detection Workflow
+
+Authentication telemetry is ingested from a SQL security table using SQLAlchemy:
+
+SELECT * FROM auth_events
+
+The dataset is analyzed using pandas to identify suspicious authentication behavior such as:
+
+repeated failed login attempts from the same IP
+failed-to-success authentication transitions
+privilege escalation sequences
+persistence creation events
+
+Example correlation logic implemented in the notebook:
+
+failed ×3
+→ success
+→ sudo
+→ create_user
+
+Alerts are generated and exported as structured JSON output.
+
 ### Detection Pipeline
 
 The detection workflow simulates a simplified SIEM-style authentication telemetry pipeline:
