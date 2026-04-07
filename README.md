@@ -1,5 +1,6 @@
-Authentication Detection Engine
-Overview
+# Authentication Detection Engine
+
+## Overview
 
 This project demonstrates authentication-focused detection engineering techniques across Linux security telemetry environments.
 
@@ -7,23 +8,27 @@ The goal of this lab is to simulate realistic attacker behavior and implement de
 
 The detectors correlate:
 
-failed authentication attempts
-successful login activity
-privilege escalation behavior
-persistence indicators
-geographic login anomalies
-multi-stage attack chains
+- failed authentication attempts
+- successful login activity
+- privilege escalation behavior
+- persistence indicators
+- geographic login anomalies
+- multi-stage attack chains
 
 This project reflects hands-on experience with:
 
-Linux authentication logs (auth.log)
-SQL-based telemetry normalization
-pandas-based detection correlation
-behavioral authentication analytics
-privilege escalation detection
-persistence detection logic
-Detection Coverage
-Linux — Brute Force Detection
+- Linux authentication logs (auth.log)
+- SQL-based telemetry normalization
+- pandas-based detection correlation
+- behavioral authentication analytics
+- privilege escalation detection
+- persistence detection logic
+
+--- 
+
+## Detection Coverage
+
+### Linux — Brute Force Detection
 
 Detects:
 
@@ -38,7 +43,9 @@ Telemetry source:
 
 auth_events (parsed from Linux auth.log)
 
-Linux — Password Spray Detection
+---
+
+### Linux — Password Spray Detection
 
 Detects:
 
@@ -52,7 +59,9 @@ Telemetry source:
 
 auth_events
 
-Linux — Foreign Login Detection
+--- 
+
+### Linux — Foreign Login Detection
 
 Detects:
 
@@ -68,7 +77,9 @@ Telemetry source:
 
 auth_events + IP enrichment
 
-Linux — SSH Attack Chain Detection
+--- 
+
+### Linux — SSH Attack Chain Detection
 
 Detects a realistic attacker sequence:
 
@@ -87,7 +98,9 @@ Telemetry source:
 
 auth_events
 
-Detection Pipeline
+--- 
+
+### Detection Pipeline
 
 The detection workflow simulates a simplified SIEM-style authentication telemetry pipeline:
 
@@ -99,7 +112,7 @@ Linux auth.log
 
 This reflects a realistic authentication telemetry detection workflow.
 
-Sample Logs
+### Sample Logs
 
 Example telemetry datasets are included:
 
