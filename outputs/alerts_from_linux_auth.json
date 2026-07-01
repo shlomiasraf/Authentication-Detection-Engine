@@ -6,7 +6,7 @@
       "ip": "10.0.0.5",
       "user": "root",
       "severity": "HIGH",
-      "attack_chain": "failed x3 -> success -> sudo -> create user"
+      "attack_chain": "failed\u00d73 \u2192 success \u2192 sudo \u2192 create user"
     }
   ]
 }
