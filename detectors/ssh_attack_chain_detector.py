@@ -8,7 +8,6 @@ def detector_attack_chain(events):
 
     for host, host_events in events_by_host.items():
 
-        # חשוב!
         host_events.sort(key=lambda e: e["timestamp"])
 
         count_failed = 0

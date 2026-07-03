@@ -1,5 +1,5 @@
 {
-  "total_alerts": 9,
+  "total_alerts": 10,
   "alerts": [
     {
       "type": "foreign_login",
@@ -63,11 +63,18 @@
       "type": "password_spray",
       "ip": "198.51.100.24",
       "users": [
-        "dan",
+        "ron",
         "or",
-        "ron"
+        "dan"
       ],
       "message": "Password spray detected"
+    },
+    {
+      "type": "attack_chain_alert",
+      "host": "server1",
+      "ip": "185.22.55.1",
+      "failed_count": 3,
+      "message": "SSH brute force \u2192 success \u2192 privilege escalation \u2192 persistence"
     }
   ]
 }
